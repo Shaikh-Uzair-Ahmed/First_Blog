@@ -14,7 +14,7 @@
 
     <section id="welcome">
         <header>
-            <img src="{% static "blog/images/max.png" %}" alt="Uzair - The Author Of This Blog">
+            <img src="{% static "blog/images/Uzair.jpg" %}" alt="Uzair - The Author Of This Blog">
             <h2>Uzair's Blog</h2>
         </header>
         <p>Hi, I am Uzair and I love to blog about random stuff!</p>
@@ -24,7 +24,9 @@
         <h2>My Latest Thoughts</h2>
 
         <ul>
-            {% include "blog/includes/post.html" %}
+            {% for post in posts  %}
+                {% include "blog/includes/post.html" %}
+            {% endfor %}
         </ul>
     </section>
 
